@@ -247,6 +247,8 @@
       </form>
     </dialog>
 
+    <button id="scroll-top" class="scroll-top" aria-label="Scroll to top">↑</button>
+
     <script>
       const root = document.documentElement;
       const themeToggle = document.getElementById('theme-toggle');
@@ -272,6 +274,7 @@
       const modalTitle = document.getElementById('modal-title');
       const modalMeta = document.getElementById('modal-meta');
       const modalDetails = document.getElementById('modal-details');
+      const scrollTopButton = document.getElementById('scroll-top');
 
       document.querySelectorAll('.experience-card').forEach((card) => {
         card.addEventListener('click', () => {
@@ -298,6 +301,18 @@
         if (!isInDialog) {
           dialog.close();
         }
+      });
+
+      const toggleScrollTopButton = () => {
+        const shouldShow = window.scrollY > 280;
+        scrollTopButton.classList.toggle('visible', shouldShow);
+      };
+
+      window.addEventListener('scroll', toggleScrollTopButton);
+      toggleScrollTopButton();
+
+      scrollTopButton.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
       });
     </script>
   </body>
