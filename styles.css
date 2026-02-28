@@ -32,7 +32,7 @@ html[data-theme="light"] {
 body {
   margin: 0;
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  background: radial-gradient(circle at top, #1b2443 0%, var(--bg) 55%);
+  background: var(--bg);
   color: var(--text);
   line-height: 1.6;
 }
@@ -54,7 +54,7 @@ body {
   z-index: 20;
   padding: 1rem 0 1.5rem;
   margin-bottom: 1.4rem;
-  background: linear-gradient(180deg, rgba(11, 16, 32, 0.95), rgba(11, 16, 32, 0.8));
+  background: var(--bg);
   backdrop-filter: blur(6px);
 }
 
@@ -217,7 +217,17 @@ ul {
 }
 
 .modal-card {
-  padding: 1rem 1.1rem 1.2rem;
+  padding: 1.3rem 1.5rem 1.6rem;
+}
+
+#modal-meta {
+  margin-bottom: 0.9rem;
+}
+
+#modal-details {
+  margin: 0;
+  white-space: pre-line;
+  line-height: 1.75;
 }
 
 .modal-head {
@@ -362,8 +372,16 @@ html[data-theme="light"] .lead {
 }
 
 html[data-theme="light"] .hero {
-  background: linear-gradient(180deg, rgba(238, 243, 255, 0.96), rgba(238, 243, 255, 0.83));
+  background: var(--bg);
 }
 html[data-theme="light"] .eyebrow {
   border-color: #bfd0ff;
+}
+
+#credentials {
+  margin-top: 2.4rem;
+}
+
+.one-up {
+  grid-template-columns: 1fr;
 }

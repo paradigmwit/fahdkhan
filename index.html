@@ -211,7 +211,7 @@
           </div>
         </section>
 
-        <section class="section grid two-up" id="credentials">
+        <section class="section grid one-up" id="credentials">
           <article class="card">
             <h2>Certification</h2>
             <p>AWS Certified Developer - Associate</p>
@@ -286,7 +286,7 @@
 
           modalTitle.textContent = `${role} · ${company}`;
           modalMeta.textContent = `${dates} · ${location}`;
-          modalDetails.textContent = details;
+          modalDetails.textContent = details.replace(/\.\s+/g, '.\n\n');
           dialog.showModal();
         });
       });
