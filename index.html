@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -19,6 +19,13 @@
   <body>
     <div class="page-shell">
       <header class="hero section">
+        <div class="top-controls" aria-label="Theme controls">
+          <label class="theme-toggle" for="theme-toggle">
+            <input type="checkbox" id="theme-toggle" aria-label="Toggle night and day mode" />
+            <span class="slider" aria-hidden="true"></span>
+            <span class="toggle-text" id="theme-label">Night Mode</span>
+          </label>
+        </div>
         <p class="eyebrow">Engineering Leadership · AI · Cloud Native</p>
         <h1>Fahd Mohammed Khan</h1>
         <p class="subtitle">Engineering Manager</p>
@@ -31,8 +38,8 @@
       </header>
 
       <main>
+        <h2 class="section-title">Profile</h2>
         <section class="section card" id="profile">
-          <h2>Profile</h2>
           <p>
             I work with planning, people leadership, forecasting, budgeting, roadmap planning,
             stakeholder engagement, and reporting. I have deep delivery and architecture
@@ -74,116 +81,133 @@
 
         <section class="section" id="experience">
           <h2>Experience</h2>
-          <div class="card timeline">
-            <article class="timeline-item">
-              <h3>Engineering Manager · Maersk</h3>
-              <p class="muted">Nov 2024 – Present · Gothenburg, Sweden</p>
-              <ul>
-                <li>
-                  Hands-on Engineering Manager for a team of 11, responsible for roadmap,
-                  delivery, planning, architecture, and stakeholder alignment.
-                </li>
-                <li>
-                  Leading reengineering of enablement services supporting annual business
-                  of 40M USD and growing.
-                </li>
-                <li>
-                  Helped establish the AI experimentation and development initiative,
-                  including training material and idea review process.
-                </li>
-                <li>
-                  Driving a green-field product initiative with 3 engineering teams,
-                  business sponsors, and product team.
-                </li>
-                <li>
-                  Responsible for mentoring, hiring, workforce planning, and performance
-                  discussions (check-ins, self-reflections, annual reviews).
-                </li>
-              </ul>
-            </article>
+          <p class="muted helper">Click any role card to view detailed responsibilities and technologies.</p>
+          <div class="experience-grid">
+            <button
+              class="experience-card"
+              data-role="Engineering Manager"
+              data-company="Maersk"
+              data-dates="Nov 2024 – Present"
+              data-location="Gothenburg, Sweden"
+              data-details="Hands-on Engineering Manager for a team of 11, responsible for technical roadmap, delivery, planning, people leadership, stakeholder engagement, solution architecture, and cross-team execution. Leading reengineering of enablement services supporting annual business of 40M USD and growing. Helped establish AI experimentation initiative including training and idea review process. Driving green-field product initiative across 3 engineering teams plus business sponsors and product team. Responsible for mentoring, hiring, workforce planning, and performance discussions."
+            >
+              <span class="role">Engineering Manager</span>
+              <span class="company">Maersk</span>
+              <span class="dates">Nov 2024 – Present</span>
+              <span class="location">Gothenburg, Sweden</span>
+            </button>
 
-            <article class="timeline-item">
-              <h3>Senior Software Engineer · Maersk</h3>
-              <p class="muted">Aug 2022 – Nov 2024 · Gothenburg, Sweden</p>
-              <p>
-                Led transformation and integration for three products in the Customs Tariff domain,
-                including modernization from on-premise monoliths to Azure cloud-native architecture.
-              </p>
-              <p class="stack"><strong>Technologies:</strong> Java, SpringBoot, SOAP, Azure Cloud, GitHub Actions, Docker, Kubernetes, Helm, Terraform, Hashicorp Vault</p>
-              <p class="stack"><strong>Methodology:</strong> Scrum (2-week sprints)</p>
-            </article>
+            <button
+              class="experience-card"
+              data-role="Senior Software Engineer"
+              data-company="Maersk"
+              data-dates="Aug 2022 – Nov 2024"
+              data-location="Gothenburg, Sweden"
+              data-details="Led transformation and integration for three products in the Customs Tariff domain. Modernized applications from on-premise to Azure cloud, including migration of codebase, CI/CD pipelines, automated testing, quality gates, dockerization, and Kubernetes deployment. Technologies: Java, SpringBoot, SOAP, Azure Cloud, GitHub Actions, Docker, Kubernetes, Helm, Terraform, Hashicorp Vault. Methodology: Scrum (2-week sprints)."
+            >
+              <span class="role">Senior Software Engineer</span>
+              <span class="company">Maersk</span>
+              <span class="dates">Aug 2022 – Nov 2024</span>
+              <span class="location">Gothenburg, Sweden</span>
+            </button>
 
-            <article class="timeline-item">
-              <h3>Senior Software Engineer · WirelessCar</h3>
-              <p class="muted">Aug 2020 – Aug 2022 · Gothenburg, Sweden</p>
-              <p>
-                Worked on event-driven OTA firmware update services connecting OEM hardware
-                and manufacturer systems for campaign orchestration and delivery.
-              </p>
-              <p class="stack"><strong>Technologies:</strong> Java 11, Lambda, SQS, SNS, DynamoDB, S3, EFS, CloudFormation, CloudWatch, ECS Fargate, Parameter Store, IAM</p>
-              <p class="stack"><strong>Methodology:</strong> SAFe (2-week sprints, quarterly PIs)</p>
-            </article>
+            <button
+              class="experience-card"
+              data-role="Senior Software Engineer"
+              data-company="WirelessCar"
+              data-dates="Aug 2020 – Aug 2022"
+              data-location="Gothenburg, Sweden"
+              data-details="Worked on event-driven OTA firmware update services integrating OEM hardware with manufacturer systems. Built around AWS with Java. Technologies: Java 11, Lambda, SQS, SNS, DynamoDB, S3, EFS, CloudFormation, CloudWatch, ECS Fargate, Parameter Store, IAM. Methodology: SAFe (2-week sprints and quarterly Program Increments)."
+            >
+              <span class="role">Senior Software Engineer</span>
+              <span class="company">WirelessCar</span>
+              <span class="dates">Aug 2020 – Aug 2022</span>
+              <span class="location">Gothenburg, Sweden</span>
+            </button>
 
-            <article class="timeline-item">
-              <h3>System Developer for WirelessCar · Sigma IT</h3>
-              <p class="muted">Oct 2019 – Jul 2020 · Gothenburg, Sweden</p>
-              <ul>
-                <li>Contributed to lift-and-shift of monolith systems to AWS cloud.</li>
-                <li>Analyzed existing systems and identified cloud migration improvements.</li>
-                <li>Developed, tested, and deployed modernization solutions.</li>
-              </ul>
-              <p class="stack"><strong>Technologies:</strong> Java 8, Python, Spring, AWS, DynamoDB, Lambda, CloudFormation, Serverless, AWS CLI</p>
-            </article>
+            <button
+              class="experience-card"
+              data-role="System Developer for WirelessCar"
+              data-company="Sigma IT"
+              data-dates="Oct 2019 – Jul 2020"
+              data-location="Gothenburg, Sweden"
+              data-details="Part of team lifting and shifting monolith system to AWS cloud. Responsibilities included system analysis, identifying migration strategies, solution development, testing, and deployments. Technologies: Java 8, Python, Spring, AWS, DynamoDB, Lambda, CloudFormation, Serverless, AWS CLI."
+            >
+              <span class="role">System Developer for WirelessCar</span>
+              <span class="company">Sigma IT</span>
+              <span class="dates">Oct 2019 – Jul 2020</span>
+              <span class="location">Gothenburg, Sweden</span>
+            </button>
 
-            <article class="timeline-item">
-              <h3>System Engineer · Deutsche Bank</h3>
-              <p class="muted">Aug 2017 – Sep 2019 · Pune, India</p>
-              <ul>
-                <li>Developed new modules and re-engineered legacy code to REST endpoints.</li>
-                <li>Handled stakeholder engagement, scrum/release/change management.</li>
-                <li>Performed governance as Technical Information Security Officer.</li>
-                <li>Awarded for excellence in project contribution (Nov 2017).</li>
-              </ul>
-              <p class="stack"><strong>Technologies:</strong> Java 8, Spring, Struts, Hibernate, JBPM, SOAP, Oracle 11 PL/SQL, SpringBoot, Jersey REST, Kafka, Zookeeper</p>
-            </article>
+            <button
+              class="experience-card"
+              data-role="System Engineer"
+              data-company="Deutsche Bank"
+              data-dates="Aug 2017 – Sep 2019"
+              data-location="Pune, India"
+              data-details="Part of tools infrastructure group, developed new modules and re-engineered legacy code to REST endpoints. Also handled stakeholder engagement, scrum/release/change management, governance activities as Technical Information Security Officer, and hiring/mentoring. Awarded for excellence in project contributions in Nov 2017. Technologies: Java 8, Spring, Struts, Hibernate, JBPM, SOAP, Oracle 11 PL/SQL, SpringBoot, Jersey REST, Kafka, Zookeeper."
+            >
+              <span class="role">System Engineer</span>
+              <span class="company">Deutsche Bank</span>
+              <span class="dates">Aug 2017 – Sep 2019</span>
+              <span class="location">Pune, India</span>
+            </button>
 
-            <article class="timeline-item">
-              <h3>System Developer · Varian Medical Systems</h3>
-              <p class="muted">Aug 2016 – Aug 2017 · Pune, India</p>
-              <p>
-                Built FHIR-based REST web services for patient care and treatment data exposure.
-              </p>
-              <p class="stack"><strong>Technologies:</strong> HAPI FHIR, Jersey REST, Java 8, MS SQL Server, DropWizard</p>
-            </article>
+            <button
+              class="experience-card"
+              data-role="System Developer"
+              data-company="Varian Medical Systems"
+              data-dates="Aug 2016 – Aug 2017"
+              data-location="Pune, India"
+              data-details="Worked on FHIR implementation for patient care and treatment data. Responsible for creating FHIR-based REST web services. Technologies: HAPI FHIR (Jersey REST), Java 8, MS SQL Server, DropWizard."
+            >
+              <span class="role">System Developer</span>
+              <span class="company">Varian Medical Systems</span>
+              <span class="dates">Aug 2016 – Aug 2017</span>
+              <span class="location">Pune, India</span>
+            </button>
 
-            <article class="timeline-item">
-              <h3>System Developer · ADP</h3>
-              <p class="muted">Nov 2014 – Aug 2016 · Pune, India</p>
-              <ul>
-                <li>Implemented REST interfaces for hiring and tax credit workflows.</li>
-                <li>Built ETL data processes and backoffice GUI features.</li>
-              </ul>
-              <p class="stack"><strong>Technologies:</strong> Spring, Hibernate, Jersey REST, Quartz, JMS, Bootstrap, JAXB, Angular, Freemarker</p>
-            </article>
+            <button
+              class="experience-card"
+              data-role="System Developer"
+              data-company="ADP"
+              data-dates="Nov 2014 – Aug 2016"
+              data-location="Pune, India"
+              data-details="Built REST interfaces for hiring and tax credit workflows, ETL pipelines, and backoffice GUI features. Technologies: Spring, Hibernate, Jersey REST, Quartz, JMS, Bootstrap, JAXB, Angular, Freemarker."
+            >
+              <span class="role">System Developer</span>
+              <span class="company">ADP</span>
+              <span class="dates">Nov 2014 – Aug 2016</span>
+              <span class="location">Pune, India</span>
+            </button>
 
-            <article class="timeline-item">
-              <h3>System Developer · Avaya</h3>
-              <p class="muted">Jul 2013 – Nov 2014 · Pune, India</p>
-              <p>
-                Developed a metrics dashboard based on data warehouse data.
-              </p>
-              <p class="stack"><strong>Technologies:</strong> J2EE, DOJO, Postgres PL/SQL</p>
-            </article>
+            <button
+              class="experience-card"
+              data-role="System Developer"
+              data-company="Avaya"
+              data-dates="Jul 2013 – Nov 2014"
+              data-location="Pune, India"
+              data-details="Developed a metrics dashboard from data warehouse data. Technologies: J2EE, DOJO, Postgres PL/SQL."
+            >
+              <span class="role">System Developer</span>
+              <span class="company">Avaya</span>
+              <span class="dates">Jul 2013 – Nov 2014</span>
+              <span class="location">Pune, India</span>
+            </button>
 
-            <article class="timeline-item">
-              <h3>System Developer for Cummins · Infosys</h3>
-              <p class="muted">Feb 2010 – Jun 2013 · Pune, India</p>
-              <ul>
-                <li>Delivered capabilities in order and inventory management and scheduling.</li>
-                <li>Contributed to order tracking system development.</li>
-              </ul>
-              <p class="stack"><strong>Technologies:</strong> EJB 2.0, Struts 1.2, Oracle 9i PL/SQL, Unix Shell</p>
-            </article>
+            <button
+              class="experience-card"
+              data-role="System Developer for Cummins"
+              data-company="Infosys"
+              data-dates="Feb 2010 – Jun 2013"
+              data-location="Pune, India"
+              data-details="Worked on order management, inventory management, scheduling, and order tracking systems. Technologies: EJB 2.0, Struts 1.2, Oracle 9i PL/SQL, Unix Shell."
+            >
+              <span class="role">System Developer for Cummins</span>
+              <span class="company">Infosys</span>
+              <span class="dates">Feb 2010 – Jun 2013</span>
+              <span class="location">Pune, India</span>
+            </button>
           </div>
         </section>
 
@@ -209,21 +233,72 @@
             </ul>
           </article>
         </section>
-
-        <section class="section card" id="employment">
-          <h2>Employment Snapshot</h2>
-          <ul>
-            <li>2022 – Present · Maersk, Engineering Manager</li>
-            <li>2020 – 2022 · WirelessCar AB, Senior Software Engineer</li>
-            <li>2019 – 2020 · Sigma ITC, Senior Consultant / System Developer</li>
-            <li>2017 – 2019 · Deutsche Bank, Associate</li>
-            <li>2016 – 2017 · Varian Medical Systems, Software Developer III</li>
-            <li>2014 – 2016 · ADP, Senior Technical Member</li>
-            <li>2013 – 2014 · Avaya, Senior Software Developer</li>
-            <li>2010 – 2013 · Infosys, Senior Systems Engineer</li>
-          </ul>
-        </section>
       </main>
     </div>
+
+    <dialog id="experience-dialog" class="modal">
+      <form method="dialog" class="modal-card">
+        <div class="modal-head">
+          <h3 id="modal-title"></h3>
+          <button class="close-button" aria-label="Close details">✕</button>
+        </div>
+        <p id="modal-meta" class="muted"></p>
+        <p id="modal-details"></p>
+      </form>
+    </dialog>
+
+    <script>
+      const root = document.documentElement;
+      const themeToggle = document.getElementById('theme-toggle');
+      const themeLabel = document.getElementById('theme-label');
+
+      const setTheme = (theme) => {
+        root.dataset.theme = theme;
+        themeToggle.checked = theme === 'light';
+        themeLabel.textContent = theme === 'light' ? 'Day Mode' : 'Night Mode';
+        localStorage.setItem('theme', theme);
+      };
+
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme === 'light' || savedTheme === 'dark') {
+        setTheme(savedTheme);
+      }
+
+      themeToggle.addEventListener('change', () => {
+        setTheme(themeToggle.checked ? 'light' : 'dark');
+      });
+
+      const dialog = document.getElementById('experience-dialog');
+      const modalTitle = document.getElementById('modal-title');
+      const modalMeta = document.getElementById('modal-meta');
+      const modalDetails = document.getElementById('modal-details');
+
+      document.querySelectorAll('.experience-card').forEach((card) => {
+        card.addEventListener('click', () => {
+          const role = card.dataset.role;
+          const company = card.dataset.company;
+          const dates = card.dataset.dates;
+          const location = card.dataset.location;
+          const details = card.dataset.details;
+
+          modalTitle.textContent = `${role} · ${company}`;
+          modalMeta.textContent = `${dates} · ${location}`;
+          modalDetails.textContent = details;
+          dialog.showModal();
+        });
+      });
+
+      dialog.addEventListener('click', (event) => {
+        const rect = dialog.getBoundingClientRect();
+        const isInDialog =
+          rect.top <= event.clientY &&
+          event.clientY <= rect.top + rect.height &&
+          rect.left <= event.clientX &&
+          event.clientX <= rect.left + rect.width;
+        if (!isInDialog) {
+          dialog.close();
+        }
+      });
+    </script>
   </body>
 </html>
