@@ -18,7 +18,7 @@
   </head>
   <body>
     <div class="page-shell">
-      <header class="hero section">
+      <header class="hero section" id="page-header">
         <div class="top-controls" aria-label="Theme controls">
           <label class="theme-toggle" for="theme-toggle">
             <input type="checkbox" id="theme-toggle" aria-label="Toggle night and day mode" />
@@ -27,9 +27,13 @@
           </label>
         </div>
         <p class="eyebrow">Engineering Leadership · AI · Cloud Native</p>
-        <h1>Fahd Mohammed Khan</h1>
-        <p class="subtitle">Engineering Manager</p>
-        <p class="meta">Gothenburg, Sweden</p>
+        <div class="hero-main">
+          <h1>Fahd Mohammed Khan</h1>
+          <div class="hero-details">
+            <p class="subtitle">Engineering Manager</p>
+            <p class="meta">Gothenburg, Sweden</p>
+          </div>
+        </div>
         <!--<p class="lead"></p>-->
       </header>
 
@@ -296,6 +300,7 @@
       const modalMeta = document.getElementById('modal-meta');
       const modalDetails = document.getElementById('modal-details');
       const scrollTopButton = document.getElementById('scroll-top');
+      const pageHeader = document.getElementById('page-header');
 
       document.querySelectorAll('.experience-card').forEach((card) => {
         card.addEventListener('click', () => {
@@ -329,8 +334,15 @@
         scrollTopButton.classList.toggle('visible', shouldShow);
       };
 
+      const toggleCompactHeader = () => {
+        const shouldCompact = window.scrollY > 24;
+        pageHeader.classList.toggle('is-compact', shouldCompact);
+      };
+
       window.addEventListener('scroll', toggleScrollTopButton);
+      window.addEventListener('scroll', toggleCompactHeader);
       toggleScrollTopButton();
+      toggleCompactHeader();
 
       scrollTopButton.addEventListener('click', () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
