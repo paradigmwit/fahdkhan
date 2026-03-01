@@ -63,7 +63,7 @@ main .section,
   margin-bottom: 1.4rem;
   background: var(--bg);
   backdrop-filter: blur(6px);
-  transition: padding 0.22s ease, box-shadow 0.22s ease;
+  transition: padding 0.24s ease, box-shadow 0.24s ease;
 }
 
 .hero-main {
@@ -76,6 +76,7 @@ main .section,
 .hero-details {
   text-align: right;
   padding-top: 0.85rem;
+  transition: padding-top 0.24s ease;
 }
 
 .hero.is-compact {
@@ -117,6 +118,7 @@ main .section,
   font-weight: 700;
   margin: 0;
   padding: 0.25rem 0.7rem;
+  transition: transform 0.24s ease;
 }
 
 h1,
@@ -129,6 +131,7 @@ h3 {
 h1 {
   font-size: clamp(2rem, 5vw, 3.2rem);
   margin: 0.75rem 0 0.35rem;
+  transition: font-size 0.24s ease, margin-top 0.24s ease;
 }
 
 h2 {
@@ -154,6 +157,7 @@ h3 {
 .meta {
   margin: 0.15rem 0 0.8rem;
   color: var(--muted);
+  transition: margin-bottom 0.24s ease;
 }
 
 .lead {
@@ -415,6 +419,18 @@ ul {
   display: flex;
   justify-content: flex-end;
   margin-bottom: 0.75rem;
+  transition: margin-bottom 0.24s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero,
+  .hero-details,
+  .eyebrow,
+  h1,
+  .meta,
+  .top-controls {
+    transition: none;
+  }
 }
 
 .theme-toggle {
