@@ -27,7 +27,7 @@ html[data-theme="light"] {
 
 * {
   box-sizing: border-box;
-}
+}fis_
 
 body {
   margin: 0;
@@ -81,7 +81,6 @@ main .section,
 
 .hero.is-compact {
   padding: 0.5rem 0 0.75rem;
-  box-shadow: 0 6px 18px rgba(5, 10, 28, 0.3);
 }
 
 .hero.is-compact .top-controls {
